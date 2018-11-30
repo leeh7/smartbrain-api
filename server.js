@@ -38,4 +38,4 @@ app.put('/image', (req, res) => {image.handleImage(req, res, db)});
 //image url endpoint to mask Clarifai API call and response activity on the backend/server
 app.post('/imageurl', (req, res) => {image.handleAPICall(req, res)});
 
-app.listen(3000, () =>{console.log('app is running on port 3000')});
+app.listen(process.env.PORT || 3000, () =>{console.log(`app is running on port ${process.env.PORT}`)});
